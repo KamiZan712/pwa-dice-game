@@ -1,7 +1,7 @@
 {
   "name": "運命のサイコロ",
   "short_name": "サイコロ",
-  "start_url": "./",
+  "start_url": "/pwa-dice-game/",
   "display": "standalone",
   "background_color": "#ffffff",
   "theme_color": "#e3e3e3",

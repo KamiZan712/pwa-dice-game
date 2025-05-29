@@ -1,4 +1,4 @@
-const cacheName = "dice-game-v1";
+const cacheName = "dice-game-v2";
 const filesToCache = [
   "./",
   "./index.html",
