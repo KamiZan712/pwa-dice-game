@@ -41,7 +41,7 @@
         const results = [
             "災厄！HPが1減るよん",
             "何も起きないよん",
-            "小さな幸運、金貨+1",
+            "小さな幸運、金貨+1ご",
             "回復！HP+1",
             "奇跡の遭遇、特別なセリフが出る",
             "大成功！次回の出目を+1補正"
@@ -62,6 +62,16 @@
                 });
             });
         }
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.getRegistration().then(reg => {
+                if (reg) {
+                    document.getElementById('result').textContent = `SW登録済み: ${reg.scope}`;
+                } else {
+                    document.getElementById('result').textContent = 'SW未登録';
+                }
+            });
+        }
+    
     </script>
 </body>
 
