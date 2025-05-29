@@ -1,0 +1,38 @@
+body {
+    font-family: sans-serif;
+    text-align: center;
+    padding: 2em;
+    background: #f4f4f4;
+}
+
+.dice {
+    font-size: 5em;
+}
+
+.result {
+    margin-top: 1em;
+    font-size: 1.2em;
+}
+
+input#choiceInput {
+    height: 2em;
+    font-size: 1em;
+}
+
+button {
+    font-size: 0.8em;
+    padding: 0.2em 0.5em 0 0.5em;
+    /* 上に少し余白、下はゼロ */
+    vertical-align: top;
+    margin-left: 0.5em;
+    line-height: 1;
+    /* 通常の行間 */
+}
+
+ul li button {
+    font-size: 0.75em;
+    padding: 0.2em 0.4em 0 0.4em;
+    vertical-align: top;
+    margin-left: 0.5em;
+    line-height: 1;
+}

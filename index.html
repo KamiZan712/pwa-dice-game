@@ -6,30 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>運命のサイコロ</title>
     <link rel="manifest" href="manifest.json">
+    <link rel="stylesheet" href="style.css">
 
-    <style>
-        body {
-            font-family: sans-serif;
-            text-align: center;
-            padding: 2em;
-            background: #f4f4f4;
-        }
-
-        .dice {
-            font-size: 5em;
-        }
-
-        button {
-            padding: 1em 2em;
-            font-size: 1.5em;
-            margin-top: 1em;
-        }
-
-        .result {
-            margin-top: 1em;
-            font-size: 1.2em;
-        }
-    </style>
 </head>
 
 <body>
@@ -38,6 +16,19 @@
     <button onclick="rollDice()">サイコロを振る</button>
     <div class="result" id="result"></div>
     <script src="script.js"></script>
+
+<div>
+  <input type="text" id="choiceInput" placeholder="選択肢を入力">
+  <button onclick="addChoice()"style="height: 3em;">追加</button>
+</div>
+
+<ul id="choiceList"></ul>
+<br>
+<br>
+<br>
+<button onclick="pickRandom()"style="width: 6em; font-size: 3em;">選ぶ！</button>
+
+<div id="randomResult" style="margin-top: 1em; font-weight: bold;"></div>
 </body>
 
 </html>
