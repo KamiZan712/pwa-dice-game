@@ -8,6 +8,7 @@ const filesToCache = [
 
 // インストール（キャッシュ登録）
 self.addEventListener("install", (event) => {
+      self.skipWaiting(); // 手動で更新を即時反映
   event.waitUntil(
     caches.open(cacheName).then((cache) => {
       return cache.addAll(filesToCache);
@@ -38,4 +39,5 @@ self.addEventListener("activate", (event) => {
       );
     })
   );
+  self.clients.claim(); // ←手動即時反映
 });
