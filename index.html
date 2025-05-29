@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>運命のサイコロ</title>
+  <link rel="manifest" href="manifest.json">
+  <style>
+    body {
+      font-family: sans-serif;
+      text-align: center;
+      padding: 2em;
+      background: #f4f4f4;
+    }
+    .dice {
+      font-size: 5em;
+    }
+    button {
+      padding: 1em 2em;
+      font-size: 1.5em;
+      margin-top: 1em;
+    }
+    .result {
+      margin-top: 1em;
+      font-size: 1.2em;
+    }
+  </style>
+</head>
+<body>
+  <h1>運命のサイコロ</h1>
+  <div class="dice">🎲</div>
+  <button onclick="rollDice()">サイコロを振る</button>
+  <div class="result" id="result"></div>
+
+  <script>
+  const results = [
+    "災厄！HPが1減る",
+    "何も起きない",
+    "小さな幸運、金貨+1",
+    "回復！HP+1",
+    "奇跡の遭遇、特別なセリフが出る",
+    "大成功！次回の出目を+1補正"
+  ];
+
+    function rollDice() {
+      const roll = Math.floor(Math.random() * 6) + 1;
+      document.querySelector('.dice').textContent = `🎲${roll}`;
+      document.getElementById('result').textContent = results[roll - 1];
+    }
+
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('service-worker.js');
+    }
+  </script>
+</body>
+</html>
